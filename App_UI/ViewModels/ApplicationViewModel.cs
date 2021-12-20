@@ -145,8 +145,16 @@ namespace App_UI.ViewModels
             /// 
 
             saveFileDialog.ShowDialog();
-
-           PeopleDataService.Instance.GetAllAsJson();
+            if(saveFileDialog.Filename != null)
+            {
+                PeopleDataService.Instance.Filename = saveFileDialog.Filename;
+            }
+            else
+            {
+                PeopleDataService.Instance.Filename = saveFileDialog.Filter;
+            }
+            PeopleDataService.Instance.GetAllAsJson();
+            PeopleDataService.Instance.Save();
         }
 
         private async void ImportData(string obj)
