@@ -1,4 +1,5 @@
 ﻿using App_UI.Commands;
+using Microsoft.Extensions.Configuration;
 using OpenWeatherAPI;
 using System;
 
@@ -8,6 +9,7 @@ namespace App_UI.ViewModels
     {
         private string apiKey;
 
+        public IWindDataService WindDataService { get; set; }
         public string ApiKey
         {
             get => apiKey;
@@ -30,7 +32,7 @@ namespace App_UI.ViewModels
             }
         }
 
-
+        private static IConfiguration configuration;
         public DelegateCommand<string> SaveConfigurationCommand { get; set; }
         public DelegateCommand<string> TestConfigurationCommand { get; set; }
 
@@ -43,6 +45,7 @@ namespace App_UI.ViewModels
 
             SaveConfigurationCommand = new DelegateCommand<string>(SaveConfiguration);
             TestConfigurationCommand = new DelegateCommand<string>(TestConfiguration, CanTest);
+            
         }
 
         /// <summary>
@@ -56,10 +59,28 @@ namespace App_UI.ViewModels
             /// TODO 05 : Tester que l'appli est capable de récupérer la clé api
             /// et faire une appel à l'OpenWeatherProcessor avec GetOneCallAsync
             /// Copier le string du resultat dans TestResult
+            /// 
 
-            var result = "Attendre après l'appel de GetOneCallAsync";
+            
+
+            var result = "";
+
+
+            //result =  await OpenWeatherProcessor.GetOneCallAsync();
 
             TestResult = result == null ? "Not working" : result.ToString();
+        }
+        public static string GetValue(string key)
+        {
+            if (configuration == null)
+            {
+                initConfig();
+            }
+            return configuration.GetValue<string>(key);
+        }
+        private static void initConfig()
+        {
+            configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").AddUserSecrets("f4f5746e-d24c-4697-b6cd-935a16b16033").Build();
         }
 
         private bool CanTest(string obj)

@@ -142,13 +142,20 @@ namespace App_UI.ViewModels
         {
             /// TODO 02a : Compléter ExportData
             /// Utiliser PeopleDataService.Instance.GetAllAsJson() pour récupérer le json
+            /// 
+
+            saveFileDialog.ShowDialog();
+
+           PeopleDataService.Instance.GetAllAsJson();
         }
 
         private async void ImportData(string obj)
         {
             /// TODO 01b : Compléter la commande d'importation
             /// Utiliser PeopleDataService.Instance.SetAllFromJson(string allContent)
-            
+            openFileDialog.ShowDialog();
+
+           // PeopleDataService.Instance.SetAllFromJson();
         }
 
         private void initViewModels()
