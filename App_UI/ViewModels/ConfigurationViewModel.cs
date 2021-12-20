@@ -69,6 +69,7 @@ namespace App_UI.ViewModels
 
         private void SaveConfiguration(string obj)
         {
+
             Properties.Settings.Default.apiKey = ApiKey;
             Properties.Settings.Default.Save();
         }

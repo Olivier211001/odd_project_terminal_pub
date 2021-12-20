@@ -77,6 +77,7 @@ namespace App_UI.ViewModels
         /// </summary>
         public DelegateCommand<string> ChangePageCommand { get; set; }
 
+
         /// <summary>
         /// TODO 01a : Compléter l'ImportCommand
         /// </summary>
@@ -89,6 +90,9 @@ namespace App_UI.ViewModels
 
         /// <summary>
         /// TODO 04a : Compléter ChangeLanguageCommand
+        /// 
+
+      
         /// </summary>
         public DelegateCommand<string> ChangeLanguageCommand { get; set; }
 
@@ -104,9 +108,16 @@ namespace App_UI.ViewModels
             saveFileDialog = _saveFileDialog;
             confirmDialog = _confirmDeleteDialog;
 
+            
+
+          
+
+    
             initCommands();            
             initViewModels();
         }
+
+  
 
         #region Méthodes
 
@@ -115,10 +126,11 @@ namespace App_UI.ViewModels
         /// </summary>
         private void initCommands()
         {
+            ImportCommand = new DelegateCommand<string>(ImportData);
             ChangePageCommand = new DelegateCommand<string>(ChangePage);
             ExportCommand = new DelegateCommand<string>(ExportData);
             NewRecordCommand = new DelegateCommand<string>(RecordCreate);
-
+            ChangeLanguageCommand = new DelegateCommand<string>(ChangeLanguage);
         }
 
         private void RecordCreate(string obj)
@@ -161,7 +173,15 @@ namespace App_UI.ViewModels
 
         private void ChangeLanguage(string language)
         {
-            Properties.Settings.Default.Language = language;
+            if(Properties.Settings.Default.Language == "fr")
+            {
+                Properties.Settings.Default.Language = "en";
+            }
+            else
+            {
+                Properties.Settings.Default.Language = "fr";
+            }
+            //Properties.Settings.Default.Language = language;
             Properties.Settings.Default.Save();
 
             var msg = (MessageBoxDialogService)confirmDialog.Clone();

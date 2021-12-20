@@ -117,8 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="birthday" xml:space="preserve">
+    <value>Date de naissance : </value>
+  </data>
   <data name="btn_save" xml:space="preserve">
     <value>Sauvegarder</value>
+  </data>
+  <data name="city" xml:space="preserve">
+    <value>ville : </value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>Courriel : </value>
+  </data>
+  <data name="firstname" xml:space="preserve">
+    <value>prénom : </value>
+  </data>
+  <data name="lastname" xml:space="preserve">
+    <value>nom de famille : </value>
   </data>
   <data name="lbl_apiKey" xml:space="preserve">
     <value>Clé API :</value>
@@ -137,5 +152,20 @@
   </data>
   <data name="mi_preferences" xml:space="preserve">
     <value>Préférences...</value>
+  </data>
+  <data name="mobile" xml:space="preserve">
+    <value>Cellulaire : </value>
+  </data>
+  <data name="phone" xml:space="preserve">
+    <value>Téléphone : </value>
+  </data>
+  <data name="postalcode" xml:space="preserve">
+    <value>Postal code : </value>
+  </data>
+  <data name="record" xml:space="preserve">
+    <value>nouvelle enregistrement</value>
+  </data>
+  <data name="testresult" xml:space="preserve">
+    <value>resultat du test :</value>
   </data>
 </root>

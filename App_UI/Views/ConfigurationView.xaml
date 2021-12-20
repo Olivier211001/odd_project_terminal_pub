@@ -30,7 +30,7 @@
 
         <StackPanel Grid.Row="3" Grid.ColumnSpan="2">
             <!-- TODO 04 : Besoin de traduction -->
-            <TextBlock Text="Test result : "/>
+            <TextBlock Text="{x:Static p:Resources.testresult}"/>
             <TextBox Text="{Binding TestResult}"/>
         </StackPanel>
 

@@ -30,12 +30,13 @@
             </MenuItem>
             <MenuItem Header="{x:Static p:Resources.mi_language}">
                 <MenuItem Header="English" Command="{Binding ChangeLanguageCommand}" CommandParameter="en" />
+                <MenuItem Header="Français" Command="{Binding ChangeLanguageCommand}" CommandParameter="fr" />
                 <!-- TODO Ajouter l'item "Français" pour changer la langue en français -->
             </MenuItem>
         </Menu>
         <ToolBar DockPanel.Dock="Top">
             <!-- TODO 04 : Besoin de traduction -->
-            <Button Height="25" Width="25" Command="{Binding NewRecordCommand}" ToolTip="New record">
+            <Button Height="25" Width="25" Command="{Binding NewRecordCommand}" ToolTip="{x:Static p:Resources.record}">
                 <Image Source="/assets/plus.png" Stretch="UniformToFill" d:Source="../assets/plus.png"/>
                 
             </Button>

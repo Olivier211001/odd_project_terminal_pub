@@ -117,8 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="birthday" xml:space="preserve">
+    <value>birthday : </value>
+  </data>
   <data name="btn_save" xml:space="preserve">
     <value>Save</value>
+  </data>
+  <data name="city" xml:space="preserve">
+    <value>city : </value>
+  </data>
+  <data name="email" xml:space="preserve">
+    <value>email : </value>
+  </data>
+  <data name="firstname" xml:space="preserve">
+    <value>First name : </value>
+  </data>
+  <data name="lastname" xml:space="preserve">
+    <value>last name : </value>
   </data>
   <data name="lbl_apiKey" xml:space="preserve">
     <value>API key :</value>
@@ -138,10 +153,25 @@
   <data name="mi_preferences" xml:space="preserve">
     <value>Preferences...</value>
   </data>
+  <data name="mobile" xml:space="preserve">
+    <value>mobile : </value>
+  </data>
   <data name="msg_restart" xml:space="preserve">
     <value>Restarting...</value>
   </data>
   <data name="msg_warning" xml:space="preserve">
     <value>Warning</value>
+  </data>
+  <data name="phone" xml:space="preserve">
+    <value>phone : </value>
+  </data>
+  <data name="postalcode" xml:space="preserve">
+    <value>code postal : </value>
+  </data>
+  <data name="record" xml:space="preserve">
+    <value>new record</value>
+  </data>
+  <data name="testresult" xml:space="preserve">
+    <value>test result : </value>
   </data>
 </root>

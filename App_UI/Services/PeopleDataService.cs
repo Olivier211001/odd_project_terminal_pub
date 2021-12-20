@@ -147,7 +147,12 @@ namespace App_UI.Services
         public int SetAllFromJson(string allContent)
         {
             /// TODO 01c : Compléter la méthode pour convertir les données
+
+
+
             
+
+
             return 0;
         }
 
@@ -158,7 +163,14 @@ namespace App_UI.Services
         public string GetAllAsJson()
         {
             /// TODO 02b : Compléter la méthode pour convertir les données
-            return string.Empty;
+            /// 
+
+            var d = data;
+
+            var resultat = JsonConvert.SerializeObject(d, Formatting.Indented);
+
+
+            return d.ToString();
         }
 
         public IEnumerable<Person> GetAll()
